@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Saira_Semi_Condensed } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const sairaSemiCondensed = Saira_Semi_Condensed({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-sairaSemiCondensed',
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="es">
+      <body className={sairaSemiCondensed.className}>{children}</body>
     </html>
   )
 }
