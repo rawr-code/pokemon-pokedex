@@ -2,6 +2,10 @@ import type { Metadata } from 'next'
 import { Saira_Semi_Condensed } from 'next/font/google'
 import './globals.css'
 
+// Styled components
+import StyledComponentsRegistry from '@/utils/registry'
+import GlobalStyles from '@/styles/GlobalStyles'
+
 // Atoms
 import { Pokedex } from '@atoms'
 
@@ -24,7 +28,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={sairaSemiCondensed.className}>
-        <Pokedex>{children}</Pokedex>
+        <StyledComponentsRegistry>
+          <GlobalStyles />
+          <Pokedex>{children}</Pokedex>
+        </StyledComponentsRegistry>
       </body>
     </html>
   )

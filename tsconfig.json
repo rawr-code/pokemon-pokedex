@@ -20,10 +20,11 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
+      "@assets/*": ["./src/assets/*"],
       "@atoms": ["./src/components/atoms/index.ts"],
-      "@molecules": ["./src/components/atoms/index.ts"],
-      "@organisms": ["./src/components/atoms/index.ts"],
-      "@assets/*": ["./src/assets/*"]
+      "@molecules": ["./src/components/molecules/index.ts"],
+      "@organisms": ["./src/components/organisms/index.ts"],
+      "@utils": ["./src/utils/index.ts"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
