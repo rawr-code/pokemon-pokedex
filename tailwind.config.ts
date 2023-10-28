@@ -18,8 +18,10 @@ const config: Config = {
       colors: {
         pokedex: {
           body: '#cd1030',
+          // body: '#d7391c',
           border: '#73121E',
           screen: '#032d28',
+          // screen: '#363f3e',
         },
       },
     },
