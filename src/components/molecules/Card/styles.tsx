@@ -1,7 +1,7 @@
 import React from 'react'
 import tw, { css, styled } from 'twin.macro'
 
-export const Wrapper = tw.div`w-1/2 pb-3 pl-3`
+export const Wrapper = tw.div`w-1/2 pb-3 pl-3 h-32`
 
 interface StyledContainerProps {
   color: string
@@ -12,7 +12,7 @@ export const StyledContainer = styled.div<StyledContainerProps>`
   ${({ color }) => css`
     background-color: ${color};
   `}
-  ${tw`relative w-full cursor-pointer overflow-hidden rounded-xl p-3 pt-2`}
+  ${tw`relative w-full cursor-pointer overflow-hidden rounded-xl p-3 pt-2 h-full`}
 `
 
 export const Container = ({ color, children }: StyledContainerProps) => (
@@ -23,7 +23,7 @@ export const PokeballWrapper = tw.div`absolute -bottom-4 -right-3 z-10 w-1/2 con
 
 export const Header = tw.div`flex items-start justify-between text-white`
 
-export const ContentWrapper = tw.div`relative z-20 mt-3 flex justify-between`
+export const ContentWrapper = tw.div`relative z-20 mt-2.5 flex justify-between`
 
 export const TypesWrapper = tw.div`flex flex-col space-y-1`
 
