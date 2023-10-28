@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter, Saira_Semi_Condensed } from 'next/font/google'
+import { Saira_Semi_Condensed } from 'next/font/google'
 import './globals.css'
+
+// Atoms
+import { Pokedex } from '@atoms'
 
 const sairaSemiCondensed = Saira_Semi_Condensed({
   weight: ['400', '700'],
@@ -20,7 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={sairaSemiCondensed.className}>{children}</body>
+      <body className={sairaSemiCondensed.className}>
+        <Pokedex>{children}</Pokedex>
+      </body>
     </html>
   )
 }
