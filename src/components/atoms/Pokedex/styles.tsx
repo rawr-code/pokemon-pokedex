@@ -1,7 +1,7 @@
 import tw, { css, styled } from 'twin.macro'
 
 export const Wrapper = tw.div`relative w-[540px] h-[720px] bg-pokedex-body rounded-[20px] p-8 overflow-hidden border-2 border-pokedex-border`
-export const Border = tw.div`relative w-full h-full border-2 border-pokedex-border bg-pokedex-screen rounded-b-2xl p-5`
+export const Border = tw.div`relative w-full h-full border-2 border-pokedex-border bg-pokedex-wrapper rounded-b-2xl p-5`
 export const Screen = tw.div`w-full h-full rounded-b-md bg-white`
 
 export const BlueCircle = tw.div`
@@ -33,12 +33,12 @@ export const Light = ({ color }: StyledLightProps) => (
 )
 
 export const SpeakerWrapper = tw.div`absolute top-3 left-1/2 -translate-x-1/2 flex`
-export const Speaker = tw.div`bg-pokedex-screen w-12 h-2 border-2 border-pokedex-border rounded-md mx-1`
+export const Speaker = tw.div`bg-pokedex-wrapper w-12 h-2 border-2 border-pokedex-border rounded-md mx-1`
 
 export const CornerBorder = tw.div`
   absolute left-2 top-5
-  before:absolute before:left-0 before:top-0 before:bg-pokedex-screen before:w-24 before:h-16
-  after:absolute after:-rotate-[41deg] after:left-16 after:-top-6 after:bg-pokedex-screen after:w-24 after:h-16
+  before:absolute before:left-0 before:top-0 before:bg-pokedex-wrapper before:w-24 before:h-16
+  after:absolute after:-rotate-[41deg] after:left-16 after:-top-6 after:bg-pokedex-wrapper after:w-24 after:h-16
 `
 
 export const CornerBody = tw.div`
