@@ -74,6 +74,27 @@ const Icons = {
       />
     </svg>
   ),
+  loader: ({ size, color, className }: IconProps) => (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none">
+      <path
+        d="M48 24c0 13.255-10.745 24-24 24S0 37.255 0 24 10.745 0 24 0s24 10.745 24 24zM8.766 24c0 8.414 6.82 15.234 15.234 15.234S39.234 32.414 39.234 24 32.414 8.766 24 8.766 8.766 15.586 8.766 24z"
+        fill="url(#prefix__paint0_linear_1260_36246)"
+      />
+      <defs>
+        <linearGradient
+          id="prefix__paint0_linear_1260_36246"
+          x1={24}
+          y1={0}
+          x2={24}
+          y2={24}
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor={color} />
+          <stop offset={1} stopColor={color} stopOpacity={0} />
+        </linearGradient>
+      </defs>
+    </svg>
+  ),
   // Elements
   water: ({ size, color, className }: IconProps) => (
     <svg

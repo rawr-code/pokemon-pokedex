@@ -1,6 +1,9 @@
 'use client'
 import { useState } from 'react'
 
+// Atoms
+import { Loader } from '@atoms'
+
 // Molecules
 import { Card } from '@molecules'
 
@@ -9,11 +12,25 @@ import { usePokemons } from '@hooks'
 
 export default function HomePage() {
   const [page, setPage] = useState(0)
+  const [offset] = useState(10)
 
-  const { data } = usePokemons.useGetPokemons(page, 10)
+  const { data, isFetching, isFetched } = usePokemons.useGetPokemons(
+    page,
+    offset,
+  )
 
+  const totalPages = Math.ceil((data?.count || 1) / offset)
+
+  const handlePrev = () =>
+    setPage(p => {
+      if (p > 0) return p - 1
+      return p
+    })
+
+  const handleNext = () => setPage(p => p + 1)
   return (
     <div className="relative flex h-full w-full flex-col bg-pokedex-screen">
+      {isFetching && !isFetched && <Loader />}
       <header className=" flex h-16 w-full">
         <div
           className="flex w-full items-center justify-end py-3 pr-2"
@@ -73,8 +90,8 @@ export default function HomePage() {
           </svg>
         </div>
       </header>
-      <div className="space-x-a4 p-a4 flex w-full flex-wrap overflow-auto pr-3 pt-3">
-        {data?.map((i: any) => (
+      <div className="space-x-a4 p-a4 flex w-full flex-1 flex-wrap overflow-auto pr-3 pt-3">
+        {data?.data?.map((i: any) => (
           <Card
             key={i.id}
             name={i.name}
@@ -84,6 +101,25 @@ export default function HomePage() {
           />
         ))}
       </div>
+      <footer className="flex items-center justify-between border-t-2">
+        <button
+          className="text-md px-5 py-3 font-bold disabled:opacity-40"
+          disabled={page < 1}
+          onClick={handlePrev}
+        >
+          Prev
+        </button>
+        <p className="text-md font-baold">
+          {page + 1} - {totalPages}
+        </p>
+        <button
+          className="text-md px-5 py-3 font-bold"
+          disabled={page >= totalPages}
+          onClick={handleNext}
+        >
+          Next
+        </button>
+      </footer>
     </div>
   )
 }

@@ -5,7 +5,7 @@ export async function GET(request: Request) {
   const res = await fetch(
     `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`,
   )
-  const { results } = await res.json()
+  const { count, results } = await res.json()
 
   const mappedArray = await Promise.all(
     results.map((p: any) => {
@@ -13,5 +13,5 @@ export async function GET(request: Request) {
     }),
   )
 
-  return Response.json({ data: mappedArray })
+  return Response.json({ data: mappedArray, count })
 }

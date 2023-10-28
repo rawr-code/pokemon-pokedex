@@ -12,11 +12,12 @@ const KEY = 'pokemons'
 export const useGetPokemons = (page: number, offset: number) => {
   const queryClient = useQueryClient()
 
-  const { status, data, error, isFetching, isPlaceholderData } = useQuery({
-    queryKey: [KEY, page],
-    queryFn: pokemonService.getPokemon(page * offset),
-    placeholderData: keepPreviousData,
-  })
+  const { status, data, error, isFetching, isPlaceholderData, isFetched } =
+    useQuery({
+      queryKey: [KEY, page],
+      queryFn: pokemonService.getPokemon(page * offset),
+      placeholderData: keepPreviousData,
+    })
 
   useEffect(() => {
     if (!isPlaceholderData && !isFetching) {
@@ -27,5 +28,5 @@ export const useGetPokemons = (page: number, offset: number) => {
     }
   }, [data, isFetching, isPlaceholderData, offset, page, queryClient])
 
-  return { status, data, error, isFetching }
+  return { status, data, error, isFetching, isPlaceholderData, isFetched }
 }

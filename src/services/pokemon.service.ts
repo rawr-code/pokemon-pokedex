@@ -20,7 +20,7 @@ const genId = (id: string) => {
 export const formatData = (data: pokemonModels.Pokemon) => {
   const formatedData: pokemonModels.PokemonInfo = {
     id: genId(data.id.toString()),
-    img: data.sprites.other?.dream_world.front_default,
+    img: data.sprites.other?.dream_world.front_default || '',
     name: data.name,
     height: data.height,
     weight: data.weight,
@@ -41,9 +41,15 @@ export const formatData = (data: pokemonModels.Pokemon) => {
 export const getPokemon =
   (offset = 0, limit = 10) =>
   async () => {
-    const { data } = await fetcher.get<{ data: pokemonModels.Pokemon[] }>(
-      parseUrl(urls.POKEMONS.getAll, { offset, limit }),
-    )
+    const { data } = await fetcher.get<{
+      data: pokemonModels.Pokemon[]
+      count: number
+    }>(parseUrl(urls.POKEMONS.getAll, { offset, limit }))
 
-    return data.data.map(p => formatData(p))
+    const { count } = data
+
+    return {
+      count,
+      data: data.data.map(p => formatData(p)),
+    }
   }
