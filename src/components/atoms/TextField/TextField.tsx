@@ -6,7 +6,13 @@ import { Icons } from '@atoms'
 // Types
 interface TextFieldProps extends React.ComponentPropsWithoutRef<'input'> {}
 
-export default function TextField({ type, placeholder }: TextFieldProps) {
+export default function TextField({
+  type,
+  placeholder,
+  required,
+  value,
+  onChange
+}: TextFieldProps) {
   const [showPass, setShowPass] = useState(false)
 
   const handleInputType = () => {
@@ -14,19 +20,25 @@ export default function TextField({ type, placeholder }: TextFieldProps) {
   }
 
   const inputType = useMemo(() => {
-    if (!showPass) return 'password'
-    return 'text'
-  }, [showPass])
+    if (type === 'password') {
+      if (!showPass) return 'password'
+      return 'text'
+    }
+    return type
+  }, [showPass, type])
 
   return (
     <div className="flex w-full rounded-xl border-2 border-gray-300">
       <input
+        required={required}
         type={inputType}
         placeholder={placeholder}
+        value={value}
+        onChange={onChange}
         className="w-full rounded-xl bg-transparent px-4 py-[9.5px]"
       />
       {type === 'password' && (
-        <button className="mr-3" onClick={handleInputType}>
+        <button type="button" className="mr-3" onClick={handleInputType}>
           {showPass ? (
             <Icons.eyeClose size={24} color="stroke-pokedex-body" />
           ) : (

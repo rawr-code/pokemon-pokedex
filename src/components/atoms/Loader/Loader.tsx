@@ -11,7 +11,7 @@ export default function Loader() {
       <div className="animate-spin">
         <Icons.loader color={getColor('loader')} size={36} />
       </div>
-      <p className="text-xl font-black mt-5">Loading</p>
+      <p className="text-xl font-black mt-5">Cargando</p>
     </div>
   )
 }

@@ -1,4 +1,7 @@
 const AllUrls = {
+  AUTH: {
+    login: '/auth/login',
+  },
   POKEMONS: {
     getAll: '/pokemon/?offset={offset}&limit={limit}',
   },

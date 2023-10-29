@@ -17,6 +17,7 @@ export const useGetPokemons = (page: number, offset: number) => {
       queryKey: [KEY, page],
       queryFn: pokemonService.getPokemon(page * offset),
       placeholderData: keepPreviousData,
+      staleTime: 50000,
     })
 
   useEffect(() => {
@@ -24,6 +25,7 @@ export const useGetPokemons = (page: number, offset: number) => {
       queryClient.prefetchQuery({
         queryKey: [KEY, page + 1],
         queryFn: pokemonService.getPokemon((page + 1) * offset),
+        staleTime: 50000,
       })
     }
   }, [data, isFetching, isPlaceholderData, offset, page, queryClient])

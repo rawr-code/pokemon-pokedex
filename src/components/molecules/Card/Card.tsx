@@ -58,7 +58,7 @@ export default function Card({ name, id, types, img }: CardProps) {
             })}
           </TypesWrapper>
           <ImageWrapper>
-            <Image src={img} alt="" className="w-full" fill />
+            <Image src={img} alt="" className="w-full h-full" fill />
           </ImageWrapper>
         </ContentWrapper>
       </Container>

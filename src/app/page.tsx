@@ -32,17 +32,8 @@ export default function HomePage() {
     <div className="relative flex h-full w-full flex-col bg-pokedex-screen">
       {isFetching && !isFetched && <Loader />}
       <header className=" flex h-16 w-full">
-        <div
-          className="flex w-full items-center justify-end py-3 pr-2"
-          onClick={() => setPage(p => p + 1)}
-        >
-          <svg
-            width={32}
-            height={32}
-            viewBox="0 0 26 26"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+        <div className="flex w-full items-center justify-end py-3 pr-2">
+          <svg width={32} height={32} viewBox="0 0 26 26" fill="none">
             <path d="M2.167 13a10.834 10.834 0 1021.667 0H2.166z" fill="#fff" />
             <path
               d="M23.833 13a10.834 10.834 0 00-21.666 0h21.666z"
