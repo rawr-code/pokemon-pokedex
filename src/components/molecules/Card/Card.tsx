@@ -24,6 +24,7 @@ import {
 
 // Types
 interface CardProps {
+  key: string // TODO: esto es por un problema con eslint en nextjs 14
   name: string
   id: string
   types: IconsName[]
