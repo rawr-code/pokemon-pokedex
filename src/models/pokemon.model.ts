@@ -1,10 +1,12 @@
+import { IconsName } from "@/components/atoms/Icons/Icons"
+
 export interface PokemonInfo {
   id: string
   img?: string
   name: string
   height: number
   weight: number
-  types: string[]
+  types: IconsName[]
   abilities: string[]
   stats: {
     hp?: number

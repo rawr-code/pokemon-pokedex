@@ -5,13 +5,18 @@ import { useState } from 'react'
 import { Loader } from '@atoms'
 
 // Molecules
-import { Card } from '@molecules'
+import { Card, Modal } from '@molecules'
 
 // Hooks
 import { usePokemons } from '@hooks'
 
+// Models
+import { pokemonModels } from '@models'
+
 export default function HomePage() {
   const [page, setPage] = useState(0)
+  const [modalIsOpen, setModalIsOpen] = useState(false)
+  const [pkSelected, setPkSelected] = useState<pokemonModels.PokemonInfo>()
   const [offset] = useState(10)
 
   const { data, isFetching, isFetched } = usePokemons.useGetPokemons(
@@ -30,6 +35,9 @@ export default function HomePage() {
   const handleNext = () => setPage(p => p + 1)
   return (
     <div className="relative flex h-full w-full flex-col bg-pokedex-screen">
+      {modalIsOpen && pkSelected && (
+        <Modal pokemon={pkSelected} onClose={() => setModalIsOpen(false)} />
+      )}
       {isFetching && !isFetched && <Loader />}
       <header className=" flex h-16 w-full">
         <div className="flex w-full items-center justify-end py-3 pr-2">
@@ -89,6 +97,10 @@ export default function HomePage() {
             id={i.id}
             types={i.types}
             img={i.img}
+            onClick={() => {
+              setPkSelected(i)
+              setModalIsOpen(true)
+            }}
           />
         ))}
       </div>

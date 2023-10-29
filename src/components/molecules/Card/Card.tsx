@@ -28,13 +28,14 @@ interface CardProps {
   id: string
   types: IconsName[]
   img: string
+  onClick: () => void
 }
 
-export default function Card({ name, id, types, img }: CardProps) {
+export default function Card({ name, id, types, img, onClick }: CardProps) {
   const typeColor = getColor(types[0])
 
   return (
-    <Wrapper>
+    <Wrapper onClick={onClick}>
       <Container color={typeColor}>
         <PokeballWrapper>
           <Icons.pokeball size={96} color="#fff" className="opacity-10" />
@@ -58,7 +59,7 @@ export default function Card({ name, id, types, img }: CardProps) {
             })}
           </TypesWrapper>
           <ImageWrapper>
-            <Image src={img} alt="" className="w-full h-full" fill />
+            <Image src={img} alt="" className="h-full w-full" fill />
           </ImageWrapper>
         </ContentWrapper>
       </Container>

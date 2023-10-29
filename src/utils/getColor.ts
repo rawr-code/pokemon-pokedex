@@ -4,6 +4,8 @@ const colors: Record<IconsName, string> = {
   eye: '',
   eyeClose: '',
   pokeball: '',
+  weight: '',
+  straighten: '',
   loader: '#CD3131',
   water: '#5090D6',
   dragon: '#0B6DC3',
