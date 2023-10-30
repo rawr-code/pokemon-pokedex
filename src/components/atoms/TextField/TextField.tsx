@@ -11,7 +11,7 @@ export default function TextField({
   placeholder,
   required,
   value,
-  onChange
+  onChange,
 }: TextFieldProps) {
   const [showPass, setShowPass] = useState(false)
 

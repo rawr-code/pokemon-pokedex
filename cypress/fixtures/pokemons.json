@@ -1,0 +1,102 @@
+[
+  {
+    "id": "#001",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
+    "name": "bulbasaur",
+    "height": 7,
+    "weight": 69,
+    "types": ["grass", "poison"],
+    "abilities": ["overgrow", "chlorophyll"],
+    "stats": { "hp": 45, "attack": 49, "defense": 49, "speed": 45 }
+  },
+  {
+    "id": "#002",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg",
+    "name": "ivysaur",
+    "height": 10,
+    "weight": 130,
+    "types": ["grass", "poison"],
+    "abilities": ["overgrow", "chlorophyll"],
+    "stats": { "hp": 60, "attack": 62, "defense": 63, "speed": 60 }
+  },
+  {
+    "id": "#003",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg",
+    "name": "venusaur",
+    "height": 20,
+    "weight": 1000,
+    "types": ["grass", "poison"],
+    "abilities": ["overgrow", "chlorophyll"],
+    "stats": { "hp": 80, "attack": 82, "defense": 83, "speed": 80 }
+  },
+  {
+    "id": "#004",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg",
+    "name": "charmander",
+    "height": 6,
+    "weight": 85,
+    "types": ["fire"],
+    "abilities": ["blaze", "solar-power"],
+    "stats": { "hp": 39, "attack": 52, "defense": 43, "speed": 65 }
+  },
+  {
+    "id": "#005",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg",
+    "name": "charmeleon",
+    "height": 11,
+    "weight": 190,
+    "types": ["fire"],
+    "abilities": ["blaze", "solar-power"],
+    "stats": { "hp": 58, "attack": 64, "defense": 58, "speed": 80 }
+  },
+  {
+    "id": "#006",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg",
+    "name": "charizard",
+    "height": 17,
+    "weight": 905,
+    "types": ["fire", "flying"],
+    "abilities": ["blaze", "solar-power"],
+    "stats": { "hp": 78, "attack": 84, "defense": 78, "speed": 100 }
+  },
+  {
+    "id": "#007",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg",
+    "name": "squirtle",
+    "height": 5,
+    "weight": 90,
+    "types": ["water"],
+    "abilities": ["torrent", "rain-dish"],
+    "stats": { "hp": 44, "attack": 48, "defense": 65, "speed": 43 }
+  },
+  {
+    "id": "#008",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/8.svg",
+    "name": "wartortle",
+    "height": 10,
+    "weight": 225,
+    "types": ["water"],
+    "abilities": ["torrent", "rain-dish"],
+    "stats": { "hp": 59, "attack": 63, "defense": 80, "speed": 58 }
+  },
+  {
+    "id": "#009",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/9.svg",
+    "name": "blastoise",
+    "height": 16,
+    "weight": 855,
+    "types": ["water"],
+    "abilities": ["torrent", "rain-dish"],
+    "stats": { "hp": 79, "attack": 83, "defense": 100, "speed": 78 }
+  },
+  {
+    "id": "#010",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10.svg",
+    "name": "caterpie",
+    "height": 3,
+    "weight": 29,
+    "types": ["bug"],
+    "abilities": ["shield-dust", "run-away"],
+    "stats": { "hp": 45, "attack": 30, "defense": 35, "speed": 45 }
+  }
+]

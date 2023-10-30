@@ -89,7 +89,10 @@ export default function HomePage() {
           </svg>
         </div>
       </header>
-      <div className="space-x-a4 p-a4 flex w-full flex-1 flex-wrap overflow-auto pr-3 pt-3">
+      <div
+        className="space-x-a4 p-a4 flex w-full flex-1 flex-wrap overflow-auto pr-3 pt-3"
+        id="cards"
+      >
         {data?.data?.map((i: any) => (
           <Card
             key={i.id}

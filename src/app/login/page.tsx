@@ -34,9 +34,6 @@ export default function LoginPage() {
 
     if (!isOk) {
       setShowAlert(true)
-      setInterval(() => {
-        setShowAlert(false)
-      }, 5000)
     } else {
       router.replace('/')
     }

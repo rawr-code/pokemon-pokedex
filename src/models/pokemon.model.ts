@@ -1,4 +1,4 @@
-import { IconsName } from "@/components/atoms/Icons/Icons"
+import { IconsName } from '@/components/atoms/Icons/Icons'
 
 export interface PokemonInfo {
   id: string

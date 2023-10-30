@@ -36,7 +36,7 @@ export default function Card({ name, id, types, img, onClick }: CardProps) {
   const typeColor = getColor(types[0])
 
   return (
-    <Wrapper onClick={onClick}>
+    <Wrapper onClick={onClick} id={name}>
       <Container color={typeColor}>
         <PokeballWrapper>
           <Icons.pokeball size={96} color="#fff" className="opacity-10" />
