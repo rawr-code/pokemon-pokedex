@@ -1,3 +1,7 @@
 export { default as getColor } from './getColor'
 export { default as parseUrl } from './parseUrl'
 export { default as fetcher } from './fetcher'
+export { default as runCommonTests } from './run-common-tests'
+export { default as createTestIDs } from './createTestIDs'
+export { default as cn } from './cn'
+export { default as render } from './render'

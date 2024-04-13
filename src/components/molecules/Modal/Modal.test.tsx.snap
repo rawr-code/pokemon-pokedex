@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Molecule | Modal should match snapshot 1`] = `
+<div>
+  <div
+    class="absolute inset-0 z-40 bg-black/50 className classes.root"
+    data-testid="Modal-root"
+  >
+    <div
+      class="absolute left-1/2 top-1/2 z-50 w-80 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xl bg-white"
+    >
+      <div
+        class="relative flex h-1/2 w-full items-center justify-end"
+        style="background-color: rgb(99, 188, 90);"
+      >
+        <div
+          class="m-3 opacity-10"
+        >
+          <svg
+            fill="none"
+            height="176"
+            viewBox="0 0 208 208"
+            width="176"
+          >
+            <path
+              d="M128.762 104c0 13.676-11.086 24.762-24.762 24.762S79.238 117.676 79.238 104 90.324 79.238 104 79.238 128.762 90.324 128.762 104z"
+              fill="white"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M104 208c52.393 0 95.738-38.743 102.947-89.143h-60.912c-6.118 17.312-22.628 29.714-42.035 29.714-19.407 0-35.916-12.402-42.035-29.714H1.053C8.263 169.257 51.607 208 104 208zM61.965 89.143H1.053C8.263 38.743 51.607 0 104 0s95.738 38.743 102.947 89.143h-60.912C139.917 71.83 123.407 59.429 104 59.429c-19.407 0-35.916 12.402-42.035 29.714zM128.762 104c0 13.676-11.086 24.762-24.762 24.762S79.238 117.676 79.238 104 90.324 79.238 104 79.238 128.762 90.324 128.762 104z"
+              fill="white"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div
+          class="absolute left-0 top-0 m-4 flex w-3/5 items-center text-white"
+        >
+          <button
+            class="mr-3 flex items-center justify-center rounded-full p-2 hover:bg-white/20"
+          >
+            <svg
+              fill="none"
+              height="20"
+              viewBox="0 0 30 30"
+              width="20"
+            >
+              <path
+                d="M13.9 23.967L4.633 14.7a1.016 1.016 0 01-.233-.333.978.978 0 01-.067-.367c0-.133.022-.256.067-.367.044-.11.122-.222.233-.333l9.3-9.3a.904.904 0 01.667-.267c.267 0 .5.1.7.3.2.2.3.434.3.7 0 .267-.1.5-.3.7L7.733 13h16.534c.288 0 .527.094.716.283a.972.972 0 01.284.717.972.972 0 01-.284.717.971.971 0 01-.716.283H7.733l7.6 7.6c.178.178.267.4.267.667 0 .266-.1.5-.3.7-.2.2-.433.3-.7.3a.96.96 0 01-.7-.3z"
+                fill="#fff"
+              />
+            </svg>
+          </button>
+          <div
+            class="w-full"
+          >
+            <p
+              class="w-full text-ellipsis text-2xl font-bold capitalize"
+            >
+              bulbasaur
+            </p>
+            <p
+              class="font-bolad text-sm"
+            >
+              #001
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative flex h-8 items-center justify-center"
+      >
+        <div
+          class="relative mb-28 h-40 w-40"
+        >
+          <img
+            alt=""
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
+      </div>
+      <div
+        class="absolute right-0 top-0 m-4 flex flex-col items-end space-y-1"
+      >
+        <div
+          class="flex w-max items-center rounded-full bg-black/20 px-1 py-1"
+        >
+          <div
+            class="flex h-5 w-5 items-center justify-center rounded-full"
+            style="background-color: rgb(99, 188, 90);"
+          >
+            <svg
+              fill="none"
+              height="12"
+              viewBox="0 0 130 139"
+              width="12"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M21.443 121.044a67.122 67.122 0 01-1.466-1.422c-25.505-25.505-25.505-66.857 0-92.362C45.482 1.755 126.751.05 126.751.05s11.093 94.068-14.412 119.573c-22.652 22.652-57.803 25.186-83.251 7.602l20.505-25.163 32.78-7.077-26.758-2.675L72.62 74.994l19.357-4.24-15.307-4.533L91.977 38.61 70.205 63.03l-8.407-11.864 2.96 19.589-15.165 17.095-7.03-21.628v28.763l-21.12 26.06z"
+                fill="#fff"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <span
+            class="mx-1 text-sm capitalize text-white"
+          >
+            grass
+          </span>
+        </div>
+        <div
+          class="flex w-max items-center rounded-full bg-black/20 px-1 py-1"
+        >
+          <div
+            class="flex h-5 w-5 items-center justify-center rounded-full"
+            style="background-color: rgb(99, 188, 90);"
+          >
+            <svg
+              fill="none"
+              height="12"
+              viewBox="0 0 144 145"
+              width="12"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M120.325 111.057C134.866 99.43 144 82.631 144 63.948 144 28.851 111.765.4 72 .4 32.236.4 0 28.85 0 63.948c0 18.008 8.486 34.267 22.122 45.83a33.13 33.13 0 00-1.28 9.203c0 14.038 8.483 25.419 18.948 25.419 6.8 0 12.762-4.805 16.105-12.022C59.237 139.595 65.2 144.4 72 144.4c6.198 0 11.701-3.993 15.158-10.165 3.457 6.172 8.96 10.165 15.158 10.165 10.464 0 18.947-11.381 18.947-25.419 0-2.767-.329-5.43-.938-7.924zm-6.641-45.848c0 17.818-19.087 32.263-42.631 32.263-23.545 0-42.632-14.445-42.632-32.263 0-17.819 19.087-32.263 42.632-32.263 23.544 0 42.631 14.444 42.631 32.263z"
+                fill="#fff"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <span
+            class="mx-1 text-sm capitalize text-white"
+          >
+            poison
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex items-end divide-x px-3 py-5"
+      >
+        <div
+          class="flex w-1/3 flex-col items-center justify-center"
+        >
+          <div
+            class="flex h-14 items-center justify-center"
+          >
+            <svg
+              fill="none"
+              height="20"
+              viewBox="0 0 17 16"
+              width="20"
+            >
+              <path
+                d="M4.283 13h8.767L12 5.667H5.333L4.283 13zm4.384-8.333a.957.957 0 00.716-.292.979.979 0 00.284-.708.971.971 0 00-.284-.717.971.971 0 00-.716-.283.979.979 0 00-.709.283.957.957 0 00-.291.717c0 .278.097.514.291.708.195.195.43.292.709.292zm1.733 0H12c.256 0 .478.08.667.241.189.162.3.37.333.625l1.033 7.334c.045.3-.03.564-.225.791a.95.95 0 01-.758.342H4.283a.95.95 0 01-.758-.342.952.952 0 01-.225-.791l1.033-7.334a.954.954 0 01.334-.625.995.995 0 01.666-.241h1.6a2.061 2.061 0 01-.2-.475 1.969 1.969 0 01-.066-.525c0-.556.194-1.028.583-1.417a1.929 1.929 0 011.417-.583c.555 0 1.027.194 1.416.583.39.389.584.861.584 1.417 0 .189-.023.364-.067.525-.044.16-.111.32-.2.475zM4.283 13h8.767-8.767z"
+                fill="black"
+              />
+            </svg>
+            <span
+              class="ml-2 text-lg"
+            >
+              69
+               kg
+            </span>
+          </div>
+          <p
+            class="text-sm"
+          >
+            Weight
+          </p>
+        </div>
+        <div
+          class="flex w-1/3 flex-col items-center justify-center"
+        >
+          <div
+            class="flex h-14 items-center justify-center"
+          >
+            <svg
+              fill="none"
+              height="20"
+              viewBox="0 0 17 16"
+              width="20"
+            >
+              <path
+                d="M4.5 2.333c0-.266.1-.5.3-.7.2-.2.433-.3.7-.3h6c.256 0 .486.1.692.3.205.2.308.434.308.7v11.334c0 .266-.103.5-.308.7-.206.2-.436.3-.692.3h-6a.96.96 0 01-.7-.3.96.96 0 01-.3-.7V2.333zm1 0v11.334h6V11.5h-3v-1h3v-2h-3v-1h3v-2h-3v-1h3V2.333h-6zm3 2.167v1-1zm0 3v1-1zm0 3v1-1z"
+                fill="black"
+              />
+            </svg>
+            <span
+              class="ml-2 text-lg"
+            >
+              7
+               m
+            </span>
+          </div>
+          <p
+            class="text-sm"
+          >
+            Height
+          </p>
+        </div>
+        <div
+          class="flex w-1/3 flex-col items-center justify-center"
+        >
+          <div
+            class="flex h-14 flex-col items-center justify-center text-sm"
+          >
+            <span
+              class="text-ellipsis"
+            >
+              overgrow
+            </span>
+            <span
+              class="text-ellipsis"
+            >
+              chlorophyll
+            </span>
+          </div>
+          <p
+            class="text-sm"
+          >
+            Moves
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

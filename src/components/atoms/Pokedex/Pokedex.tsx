@@ -1,9 +1,17 @@
 // Utils
-import cn from '@/utils/cn'
+import { createTestIDs, getColor, cn } from '@utils'
+import { FC } from 'react'
+
+const ownTestIDs = createTestIDs('Pokedex', ['root'])
 
 // Types
 interface PokedexProps {
   children: React.ReactNode
+  className?: string
+  classes?: {
+    root?: string
+  }
+  testIDs?: { [k in keyof typeof ownTestIDs]?: string | undefined }
 }
 
 const Light = ({ className }: { className: string }) => (
@@ -15,9 +23,21 @@ const Light = ({ className }: { className: string }) => (
   />
 )
 
-const Pokedex = ({ children }: PokedexProps) => {
+const Pokedex: FC<PokedexProps> = ({
+  children,
+  className = '',
+  classes = {},
+  testIDs = {},
+}) => {
   return (
-    <main className="flex h-full w-full items-center justify-center">
+    <main
+      className={cn(
+        'flex h-full w-full items-center justify-center',
+        className,
+        classes.root,
+      )}
+      data-testid={testIDs.root || ownTestIDs.root}
+    >
       <div className="relative h-full w-[540px] overflow-hidden border-pokedex-border bg-pokedex-body pt-8 sm:h-[720px] sm:rounded-[20px] sm:border-2 sm:p-8">
         {/* BlueCircle */}
         <div className='absolute left-7 top-4 z-[60] mt-0.5 flex h-16 w-16 items-center justify-center rounded-full border-2 border-pokedex-border bg-white after:h-12 after:w-12 after:rounded-full after:border-2 after:border-pokedex-border after:bg-cyan-400 after:content-[""] sm:left-10' />
@@ -46,3 +66,4 @@ const Pokedex = ({ children }: PokedexProps) => {
 }
 
 export default Pokedex
+export { ownTestIDs as testIDs }

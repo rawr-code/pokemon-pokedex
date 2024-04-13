@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atom | Loader should match snapshot 1`] = `
+<div>
+  <div
+    class="absolute inset-0 z-40 flex flex-col items-center justify-center bg-black/50 className classes.root"
+    data-testid="Loader-root"
+  >
+    <div
+      class="animate-spin"
+      data-testid="Loader-icon"
+    >
+      <svg
+        fill="none"
+        height="36"
+        viewBox="0 0 48 48"
+        width="36"
+      >
+        <path
+          d="M48 24c0 13.255-10.745 24-24 24S0 37.255 0 24 10.745 0 24 0s24 10.745 24 24zM8.766 24c0 8.414 6.82 15.234 15.234 15.234S39.234 32.414 39.234 24 32.414 8.766 24 8.766 8.766 15.586 8.766 24z"
+          fill="url(#prefix__paint0_linear_1260_36246)"
+        />
+        <defs>
+          <lineargradient
+            gradientUnits="userSpaceOnUse"
+            id="prefix__paint0_linear_1260_36246"
+            x1="24"
+            x2="24"
+            y1="0"
+            y2="24"
+          >
+            <stop
+              stop-color="#CD3131"
+            />
+            <stop
+              offset="1"
+              stop-color="#CD3131"
+              stop-opacity="0"
+            />
+          </lineargradient>
+        </defs>
+      </svg>
+    </div>
+    <p
+      class="mt-5 text-xl font-black"
+      data-testid="Loader-text"
+    >
+      Loading
+    </p>
+  </div>
+</div>
+`;
