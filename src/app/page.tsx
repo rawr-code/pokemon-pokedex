@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 
 // Atoms
 import { Loader } from '@atoms'
@@ -17,7 +17,7 @@ export default function HomePage() {
   const [page, setPage] = useState(0)
   const [modalIsOpen, setModalIsOpen] = useState(false)
   const [pkSelected, setPkSelected] = useState<pokemonModels.PokemonInfo>()
-  const [offset] = useState(10)
+  const offset = useMemo(() => 14, [])
 
   const { data, isFetching, isFetched } = usePokemons.useGetPokemons(
     page,

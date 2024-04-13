@@ -1,4 +1,3 @@
-'use client'
 import Image from 'next/image'
 
 // Atoms
@@ -8,23 +7,8 @@ import { IconsName } from '@/components/atoms/Icons/Icons'
 // Utils
 import { getColor } from '@utils'
 
-// Styles
-import {
-  Container,
-  Header,
-  PokeballWrapper,
-  ContentWrapper,
-  Wrapper,
-  TypesWrapper,
-  ImageWrapper,
-  Bagde,
-  BadgeContainer,
-  BadgeText,
-} from './styles'
-
 // Types
 interface CardProps {
-  key: string // TODO: esto es por un problema con eslint en nextjs 14
   name: string
   id: string
   types: IconsName[]
@@ -33,37 +17,53 @@ interface CardProps {
 }
 
 export default function Card({ name, id, types, img, onClick }: CardProps) {
-  const typeColor = getColor(types[0])
+  const backgroundColor = getColor(types[0])
 
   return (
-    <Wrapper onClick={onClick} id={name}>
-      <Container color={typeColor}>
-        <PokeballWrapper>
+    <div className="h-32 w-1/2 pb-3 pl-3" onClick={onClick} id={name}>
+      <div
+        className="relative h-full w-full cursor-pointer overflow-hidden rounded-xl p-3 pt-2"
+        style={{ backgroundColor }}
+      >
+        {/* Pokeball */}
+        <div className="absolute -bottom-4 -right-3 z-10 w-1/2 contrast-100">
           <Icons.pokeball size={96} color="#fff" className="opacity-10" />
-        </PokeballWrapper>
-        <Header>
+        </div>
+        {/* Header */}
+        <div className="flex items-start justify-between text-white">
           <p className="text-md capitalize">{name}</p>
           <span className="text-xs">{id}</span>
-        </Header>
-        <ContentWrapper>
-          <TypesWrapper>
+        </div>
+        {/* Content */}
+        <div className="relative z-20 mt-2.5 flex justify-between">
+          {/* Types */}
+          <div className="flex flex-col space-y-1">
             {types.map(t => {
               const Icon = Icons[t]
               return (
-                <Bagde key={t}>
-                  <BadgeContainer color={getColor(t)}>
+                <div
+                  key={t}
+                  className="flex w-max items-center rounded-full bg-black/20 px-1 py-1"
+                >
+                  <div
+                    className="flex h-5 w-5 items-center justify-center rounded-full"
+                    style={{ backgroundColor }}
+                  >
                     <Icon size={12} color="#fff" />
-                  </BadgeContainer>
-                  <BadgeText>{t}</BadgeText>
-                </Bagde>
+                  </div>
+                  <span className="mx-1 text-sm capitalize text-white">
+                    {t}
+                  </span>
+                </div>
               )
             })}
-          </TypesWrapper>
-          <ImageWrapper>
+          </div>
+          {/* Image */}
+          <div className="relative flex h-14 w-14 items-center justify-center">
             <Image src={img} alt="" className="h-full w-full" fill />
-          </ImageWrapper>
-        </ContentWrapper>
-      </Container>
-    </Wrapper>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }

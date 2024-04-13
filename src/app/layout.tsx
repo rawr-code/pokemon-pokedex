@@ -5,10 +5,6 @@ import './globals.css'
 // React Query
 import Providers from './providers'
 
-// Styled components
-import StyledComponentsRegistry from '@/utils/registry'
-import GlobalStyles from '@/styles/GlobalStyles'
-
 // Atoms
 import { Pokedex } from '@atoms'
 
@@ -25,18 +21,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode
-}) {
+}>) {
   return (
-    <html lang="es">
+    <html lang="en">
       <body className={sairaSemiCondensed.className}>
-        <StyledComponentsRegistry>
-          <GlobalStyles />
-          <Providers>
-            <Pokedex>{children}</Pokedex>
-          </Providers>
-        </StyledComponentsRegistry>
+        <Providers>
+          <Pokedex>{children}</Pokedex>
+        </Providers>
       </body>
     </html>
   )

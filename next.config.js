@@ -1,17 +1,4 @@
-const withTwin = require('./withTwin.js')
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'raw.githubusercontent.com',
-      },
-    ],
-  },
-}
+const nextConfig = {};
 
-module.exports = withTwin(nextConfig)
+module.exports = nextConfig
