@@ -9,13 +9,13 @@ import {
 import { pokemonService } from '@services'
 
 const KEY = 'pokemons'
-export const useGetPokemons = (page: number, offset: number) => {
+export const useGetPokemons = (page: number, offset: number, limit: number) => {
   const queryClient = useQueryClient()
 
   const { status, data, error, isFetching, isPlaceholderData, isFetched } =
     useQuery({
       queryKey: [KEY, page],
-      queryFn: pokemonService.getPokemon(page * offset),
+      queryFn: pokemonService.getPokemon(page * offset, limit),
       placeholderData: keepPreviousData,
       staleTime: 50000,
     })
@@ -24,11 +24,11 @@ export const useGetPokemons = (page: number, offset: number) => {
     if (!isPlaceholderData && !isFetching) {
       queryClient.prefetchQuery({
         queryKey: [KEY, page + 1],
-        queryFn: pokemonService.getPokemon((page + 1) * offset),
+        queryFn: pokemonService.getPokemon((page + 1) * offset, limit),
         staleTime: 50000,
       })
     }
-  }, [data, isFetching, isPlaceholderData, offset, page, queryClient])
+  }, [data, isFetching, isPlaceholderData, limit, offset, page, queryClient])
 
   return { status, data, error, isFetching, isPlaceholderData, isFetched }
 }
