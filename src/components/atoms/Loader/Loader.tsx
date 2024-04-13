@@ -1,4 +1,5 @@
 'use client'
+
 // Atoms
 import { Icons } from '@atoms'
 
@@ -11,7 +12,7 @@ export default function Loader() {
       <div className="animate-spin">
         <Icons.loader color={getColor('loader')} size={36} />
       </div>
-      <p className="mt-5 text-xl font-black">Cargando</p>
+      <p className="mt-5 text-xl font-black">Loading</p>
     </div>
   )
 }

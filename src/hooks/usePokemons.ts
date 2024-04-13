@@ -9,7 +9,17 @@ import {
 import { pokemonService } from '@services'
 
 const KEY = 'pokemons'
-export const useGetPokemons = (page: number, offset: number, limit: number) => {
+
+interface IuseGetPokemonsProps {
+  page: number
+  offset: number
+  limit: number
+}
+export const useGetPokemons = ({
+  page,
+  offset,
+  limit,
+}: IuseGetPokemonsProps) => {
   const queryClient = useQueryClient()
 
   const { status, data, error, isFetching, isPlaceholderData, isFetched } =

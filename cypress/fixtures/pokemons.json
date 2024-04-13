@@ -98,5 +98,45 @@
     "types": ["bug"],
     "abilities": ["shield-dust", "run-away"],
     "stats": { "hp": 45, "attack": 30, "defense": 35, "speed": 45 }
+  },
+  {
+    "id": "#011",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/11.svg",
+    "name": "metapod",
+    "height": 7,
+    "weight": 99,
+    "types": ["bug"],
+    "abilities": ["shed-skin"],
+    "stats": { "hp": 50, "attack": 20, "defense": 55, "speed": 30 }
+  },
+  {
+    "id": "#012",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/12.svg",
+    "name": "butterfree",
+    "height": 11,
+    "weight": 320,
+    "types": ["bug", "flying"],
+    "abilities": ["compound-eyes", "tinted-lens"],
+    "stats": { "hp": 60, "attack": 45, "defense": 50, "speed": 70 }
+  },
+  {
+    "id": "#013",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/13.svg",
+    "name": "weedle",
+    "height": 3,
+    "weight": 32,
+    "types": ["bug", "poison"],
+    "abilities": ["shield-dust", "run-away"],
+    "stats": { "hp": 40, "attack": 35, "defense": 30, "speed": 50 }
+  },
+  {
+    "id": "#014",
+    "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/14.svg",
+    "name": "kakuna",
+    "height": 6,
+    "weight": 100,
+    "types": ["bug", "poison"],
+    "abilities": ["shed-skin"],
+    "stats": { "hp": 45, "attack": 25, "defense": 50, "speed": 35 }
   }
 ]

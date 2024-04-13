@@ -1,4 +1,3 @@
-import user from '../fixtures/user.json'
 import pokemons from '../fixtures/pokemons.json'
 
 function randomNumber(min: number, max: number) {
@@ -6,10 +5,7 @@ function randomNumber(min: number, max: number) {
 }
 
 describe('Verify Pokemon Data', () => {
-  beforeEach(() => {
-    cy.setCookie('userToken', user.token)
-  })
-  it('Visit Home', () => {
+  it('Pokemon List', () => {
     cy.visit('/')
     cy.url().should('not.contain', 'login')
     cy.get('h1').should('not.exist')
@@ -25,7 +21,8 @@ describe('Verify Pokemon Data', () => {
       cy.get(`img[src="${pokemon.img}"]`).should('exist')
     }
 
-    const randomPokemon = pokemons[randomNumber(0, 9)]
+    const randomPokemon = pokemons[randomNumber(0, 13)]
+
     cy.get(`#${randomPokemon.name}`).should('exist').click()
     cy.get('p').contains(randomPokemon.name)
     cy.get('p').contains(randomPokemon.id)

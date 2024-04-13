@@ -1,5 +1,6 @@
 'use client'
-import { useMemo, useState } from 'react'
+
+import { useCallback, useMemo, useState } from 'react'
 
 // Atoms
 import { Loader } from '@atoms'
@@ -42,21 +43,37 @@ export default function HomePage() {
   const [pkSelected, setPkSelected] = useState<pokemonModels.PokemonInfo>()
   const offset = useMemo(() => 14, [])
 
-  const { data, isFetching, isFetched } = usePokemons.useGetPokemons(
+  const { data, isFetching, isFetched } = usePokemons.useGetPokemons({
     page,
     offset,
-    offset,
+    limit: offset,
+  })
+
+  const totalPages = useMemo(
+    () => Math.ceil((data?.count || 1) / offset),
+    [data?.count, offset],
   )
 
-  const totalPages = Math.ceil((data?.count || 1) / offset)
+  const handlePrev = useCallback(() => {
+    if (page > 0) {
+      setPage(p => p - 1)
+    }
+  }, [page])
 
-  const handlePrev = () =>
-    setPage(p => {
-      if (p > 0) return p - 1
-      return p
-    })
+  const handleNext = useCallback(() => {
+    if (page + 1 < totalPages) {
+      setPage(p => p + 1)
+    }
+  }, [page, totalPages])
 
-  const handleNext = () => setPage(p => p + 1)
+  const handleOnOpenModal = useCallback(
+    (pokemon: pokemonModels.PokemonInfo) => () => {
+      setPkSelected(pokemon)
+      setModalIsOpen(true)
+    },
+    [],
+  )
+
   return (
     <div className="relative flex h-full w-full flex-col bg-pokedex-screen">
       {modalIsOpen && pkSelected && (
@@ -78,17 +95,14 @@ export default function HomePage() {
         id="cards"
         className="flex w-full flex-1 flex-wrap overflow-auto p-1"
       >
-        {data?.data?.map((i: any) => (
-          <div key={i.id} className="w-1/2 p-1">
+        {data?.data?.map(pokemon => (
+          <div key={pokemon.id} className="w-1/2 p-1">
             <Card
-              name={i.name}
-              id={i.id}
-              types={i.types}
-              img={i.img}
-              onClick={() => {
-                setPkSelected(i)
-                setModalIsOpen(true)
-              }}
+              name={pokemon.name}
+              id={pokemon.id}
+              types={pokemon.types}
+              img={pokemon.img}
+              onClick={handleOnOpenModal(pokemon)}
             />
           </div>
         ))}

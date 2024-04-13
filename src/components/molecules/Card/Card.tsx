@@ -12,7 +12,7 @@ interface CardProps {
   name: string
   id: string
   types: IconsName[]
-  img: string
+  img?: string
   onClick: () => void
 }
 
@@ -59,7 +59,9 @@ export default function Card({ name, id, types, img, onClick }: CardProps) {
         </div>
         {/* Image */}
         <div className="relative flex h-14 w-14 items-center justify-center">
-          <Image src={img} alt="" className="h-full w-full" fill />
+          {img ? (
+            <Image src={img} alt="" className="h-full w-full" fill />
+          ) : null}
         </div>
       </div>
     </div>
