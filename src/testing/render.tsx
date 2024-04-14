@@ -1,5 +1,4 @@
-import type { RenderResult } from '@testing-library/react'
-import { render as _render } from '@testing-library/react'
+import { render as _render, RenderResult } from '@testing-library/react'
 import type { FC, ReactNode } from 'react'
 
 const Providers: FC<{ children: ReactNode }> = ({ children }) => {

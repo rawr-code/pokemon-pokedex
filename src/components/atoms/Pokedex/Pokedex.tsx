@@ -1,7 +1,9 @@
 // Utils
-import { createTestIDs, getColor, cn } from '@utils'
+import { getColor, cn } from '@utils'
 import { FC } from 'react'
 
+// Testing
+import { createTestIDs } from '@testing'
 const ownTestIDs = createTestIDs('Pokedex', ['root'])
 
 // Types

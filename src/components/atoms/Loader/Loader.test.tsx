@@ -1,4 +1,4 @@
-import { runCommonTests } from '@utils'
+import runCommonTests from '@/testing/runCommonTests'
 
 // Component
 import Loader, { testIDs } from './Loader'

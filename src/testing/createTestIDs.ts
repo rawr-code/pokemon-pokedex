@@ -1,4 +1,4 @@
-import { toKebabCase } from './string-helpers'
+import { toKebabCase } from './stringHelpers'
 
 const createTestIDs = <T extends string>(
   scopeName: string,

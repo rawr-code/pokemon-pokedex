@@ -1,5 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react'
-import { runCommonTests, render } from '@utils'
+import runCommonTests from '@/testing/runCommonTests'
+import render from '@/testing/render'
 
 // Component
 import TextField, { testIDs } from './TextField'

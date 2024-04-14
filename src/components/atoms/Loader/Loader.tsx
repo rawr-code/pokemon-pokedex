@@ -4,8 +4,10 @@ import { FC } from 'react'
 import { Icons } from '@atoms'
 
 // Utils
-import { createTestIDs, getColor, cn } from '@utils'
+import { getColor, cn } from '@utils'
 
+// Testing
+import { createTestIDs } from '@testing'
 const ownTestIDs = createTestIDs('Loader', ['root', 'icon', 'text'])
 
 interface ILoaderProps {

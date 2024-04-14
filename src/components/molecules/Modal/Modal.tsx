@@ -7,9 +7,11 @@ import { Icons } from '@atoms'
 import { pokemonModels } from '@models'
 
 // Utils
-import { createTestIDs, getColor, cn } from '@utils'
+import { getColor, cn } from '@utils'
 import { FC } from 'react'
 
+// Testing
+import { createTestIDs } from '@testing'
 const ownTestIDs = createTestIDs('Modal', ['root'])
 
 // Types
@@ -84,6 +86,7 @@ const Modal: FC<ModalProps> = ({
         <div className="absolute right-0 top-0 m-4 flex flex-col items-end space-y-1">
           {pokemon.types.map(t => {
             const Icon = Icons[t]
+
             return (
               <div
                 key={t}

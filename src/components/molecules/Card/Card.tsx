@@ -3,11 +3,13 @@ import Image from 'next/image'
 
 // Atoms
 import { Icons } from '@atoms'
-import { IconsName } from '@/components/atoms/Icons/Icons'
+import { IconsName } from '../../atoms/Icons/Icons'
 
 // Utils
-import { createTestIDs, getColor, cn } from '@utils'
+import { getColor, cn } from '@utils'
 
+// Testing
+import { createTestIDs } from '@testing'
 const ownTestIDs = createTestIDs('Card', [
   'root',
   'pokeball',

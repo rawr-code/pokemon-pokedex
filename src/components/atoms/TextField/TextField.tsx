@@ -1,11 +1,15 @@
+'use client'
+
 import { FC, useMemo, useState } from 'react'
 
 // Atoms
 import { Icons } from '@atoms'
 
 // Utils
-import { createTestIDs, cn } from '@utils'
+import { cn } from '@utils'
 
+// Testing
+import { createTestIDs } from '@testing'
 const ownTestIDs = createTestIDs('TextField', ['root', 'input', 'action'])
 
 // Types
